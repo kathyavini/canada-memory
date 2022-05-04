@@ -1,29 +1,11 @@
 import './App.css';
-import { useState } from 'react';
-
-// The following from https://stackoverflow.com/questions/53762640/how-to-import-all-images-from-a-folder-in-reactjs
-function importAll(r) {
-  return r.keys().map(r);
-}
-
-const images = importAll(
-  require.context('./Assets', false, /\.(png|jpe?g|svg)$/)
-);
-
-console.log(images);
-console.log(images.length);
+import { useState, useEffect } from 'react';
+import citiesObject from './cities';
 
 // In App:
 // State will be score, best score, win state
 // Score and best score will be passed to scoreboard
 // Win state will be passed to confetti component (ts particles)
-
-// In Cards:
-// Scoring function to update score (just pass the setter I think)
-// Shuffle function
-// Each individual card will be its own component -- can be in the same component file for all cards
-
-// In Scoreboard: (or could make a whole header component with also a light dark toggle)
 
 function ScoreBoard({ score, bestScore }) {
   return (
@@ -40,10 +22,17 @@ function ScoreBoard({ score, bestScore }) {
   );
 }
 
-function Card({ city, index, handleClick }) {
+function Card({ city, index, url, handleClick }) {
   return (
     <figure className="city-card" onClick={handleClick}>
-      <img src={images[index]} />
+      <img
+        src={url}
+        // On android, the following works in Chrome but not Firefox (sigh) to suppress the long press context menu
+        // onContextMenu={(event) => {
+        //   event.preventDefault();
+        //   event.stopPropagation();
+        // }}
+      />
       <figcaption>{city}</figcaption>
     </figure>
   );
@@ -52,41 +41,54 @@ function Card({ city, index, handleClick }) {
 function Cards() {
   const [history, setHistory] = useState([]);
 
-  function recordClick(city) {
+  const [orderedCities, setOrderedCities] = useState(citiesObject);
+
+  function timeout(delay) {
+    return new Promise((res) => setTimeout(res, delay));
+  }
+
+  useEffect(() => {
+    shuffleCards();
+  }, []);
+
+  useEffect(() => {
     console.log(history);
-    console.log(city);
+  }, [history]);
+
+  function recordClick(city) {
     setHistory((prevHistory) => [...prevHistory, city]);
   }
 
-  function shuffleCards() {}
+  async function shuffleCards() {
+    // Fisher-Yates; did not think it up myself
+    function randomSort(array) {
+      // Starting at last element
+      for (let i = array.length - 1; i > 0; i--) {
+        // Pick a random element from earlier in the array
+        let j = Math.floor(Math.random() * (i + 1));
+        // swap with current elements
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
 
-  const cities = [
-    'calgary',
-    'charlottetown',
-    'edmonton',
-    'fredericton',
-    'halifax',
-    'montreal',
-    'nunavut',
-    'ottawa',
-    'quebec city',
-    'saskatoon',
-    "st. john's",
-    'toronto',
-    'vancouver',
-    'victoria',
-    'winnipeg',
-    'yellowknife',
-    'yukon',
-  ];
+    const shuffledCities = randomSort(citiesObject).map((city) => ({
+      ...city,
+    }));
 
-  const displayCards = cities.map((city, index) => (
+    await timeout(400);
+    setOrderedCities(shuffledCities);
+  }
+
+  const displayCards = orderedCities.map((city) => (
     <Card
-      city={city}
-      key={index}
-      index={index}
+      city={city.name}
+      key={city.index}
+      index={city.index}
+      url={city.url}
       handleClick={() => {
-        recordClick(city);
+        recordClick(city.name);
+        shuffleCards();
       }}
     />
   ));
@@ -102,6 +104,9 @@ function App() {
     <div className="app">
       <header>
         <h1 className="title">Memory Cards: Canada Edition</h1>
+        <p className="instructions">
+          Click on each Canadian city or territory once (and only once) to win.
+        </p>
         <ScoreBoard score={score} bestScore={bestScore} />
         <Cards />
       </header>

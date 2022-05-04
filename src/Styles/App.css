@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* outline: 1px solid #8d99ae; */
+}
+
+body {
+  background-color: #2b2d42;
+  font-size: 1.5rem;
+  min-height: 100vh;
+  min-width: 100vw;
+  display: grid;
+  place-content: center;
+  font-family: 'noto sans', sans-serif;
+}
+
+.app {
+  padding: 2rem;
+}
+
+h1 {
+  color: #ef233c;
+  font-family: 'lato', sans-serif;
+  font-size: 4rem;
+}
+
+.instructions {
+  color:#edf2f4;
+  padding-top: 1.5rem;
+}
+
+.score-board {
+  display: flex;
+  gap: 1rem;
+}
+
+.score-section {
+  color: #8d99ae;
+  display: flex;
+  align-items: center;
+}
+
+.score-section h3 {
+  color: #edf2f4;
+  font-weight: bold;
+  font-size: 4rem;
+  padding: 1rem;
+}
+
+.score-section h3 {
+  /* color: #8d99ae; */
+  /* color: #d90429; */
+}
+
+@media (max-width:650px) {
+  
+  body {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .app {
+    width: 90vw;
+    padding-inline: 5vw;
+    justify-content: center;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .instructions {
+    font-size: 1.2rem;
+  }
+
+  .score-section h2 {
+    font-size: 1.2rem;
+  }
+
+  .score-section h3 {
+    font-size: 3rem;
+    padding-left: .5rem;
+  }
+
+}

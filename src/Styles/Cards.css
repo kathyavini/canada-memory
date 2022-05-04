@@ -1,0 +1,73 @@
+
+.all-cards {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .city-card {
+    display: grid;
+    place-content: center;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.38) 0px 2px 4px;
+  }
+  
+  .city-card img {
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+  
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+  }
+  
+  .city-card:hover img{
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
+  
+  .city-card figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #d90429;
+    min-width: max-content;
+    width: calc(100% - 15px);
+    padding-inline: 5px;
+    transform: translate(10px, -5px);
+    font-weight: bold;
+    opacity: 0;
+  }
+  
+  .city-card:hover figcaption{
+    opacity: 1;
+    transform: translate(5px, -15px);
+    transition: transform .5s, opacity .8s;
+  }
+  
+  
+  @media (hover:hover) {
+    .city-card:active {
+      transform: translate3d(2px, 2px, 3px);
+      transition: transform .2s;
+    }
+  }
+  
+
+  @media (max-width:650px) {
+    .city-card {
+        text-align: left;
+      }
+    
+      .city-card img {
+        width: 150px;
+        height: 150px;
+      }
+  }

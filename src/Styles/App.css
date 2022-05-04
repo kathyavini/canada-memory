@@ -16,6 +16,8 @@ body {
 
 .app {
   padding: 2rem;
+  justify-content: center;
+  text-align: center;
 }
 
 h1 {
@@ -24,14 +26,19 @@ h1 {
   font-size: 4rem;
 }
 
+.maple-leaf {
+  height: 20vh;
+  width: auto;
+}
+
 .instructions {
   color:#edf2f4;
-  padding-top: 1.5rem;
 }
 
 .score-board {
   display: flex;
   gap: 1rem;
+  justify-content: center;
 }
 
 .score-section {
@@ -48,8 +55,8 @@ h1 {
 }
 
 .score-section h3 {
-  /* color: #8d99ae; */
-  /* color: #d90429; */
+  /* color: #8d99ae;
+  color: #d90429; */
 }
 
 @media (max-width:650px) {
@@ -62,12 +69,10 @@ h1 {
   .app {
     width: 90vw;
     padding-inline: 5vw;
-    justify-content: center;
-    text-align: center;
   }
 
   h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
   }
 
   .instructions {

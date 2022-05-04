@@ -2,11 +2,8 @@ import './Styles/App.css';
 import { useState, useEffect } from 'react';
 import Cards from './Components/Cards';
 import citiesObject from './cities';
-
-// In App:
-// State will be score, best score, win state
-// Score and best score will be passed to scoreboard
-// Win state will be passed to confetti component (ts particles)
+import Confetti from 'react-confetti';
+import leaf from './maple-leaf.svg';
 
 function ScoreBoard({ score, bestScore }) {
   return (
@@ -24,41 +21,42 @@ function ScoreBoard({ score, bestScore }) {
 }
 
 
-
 function App() {
   const [score, setScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
   const [winState, setWinState] = useState(false);
 
-  console.log("App is rendering! Score is " + score)
-
   useEffect(() => {
     if (score > bestScore) {
-      setBestScore(score)
+      setBestScore(score);
     }
 
     if (score == citiesObject.length) {
       setWinState(true);
     }
-
   }, [score]);
-
-  useEffect(()=> {
-    if (winState) {
-      alert("You won!")
-      setWinState(false)
-    }
-  }, [winState])
 
   return (
     <div className="app">
       <header>
         <h1 className="title">Memory Cards: Canada Edition</h1>
+        <img src={leaf} alt="Canadian maple leaf" className="maple-leaf" />
         <p className="instructions">
           Click on each Canadian city or territory once (and only once) to win
         </p>
         <ScoreBoard score={score} bestScore={bestScore} />
-        <Cards score={score} setScore={setScore} winState={winState}/>
+        <Cards score={score} setScore={setScore} winState={winState} />
+        {winState && (
+          <Confetti
+            colors={['#d90429', '#edf2f4']}
+            onConfettiComplete={() => {
+              setWinState(false);
+            }}
+            recycle={false}
+            numberOfPieces={3000}
+            tweenDuration={30000}
+          />
+        )}
       </header>
     </div>
   );

@@ -4,11 +4,15 @@ import '../Styles/Cards.css';
 
 function Card({ city, index, url, handleClick }) {
   return (
-    <figure className="city-card" onClick={handleClick}>
-      <img
-        src={url}
-        alt={city}
-      />
+    <figure
+      className="city-card"
+      onClick={handleClick}
+      // This disables the context menu on long press on Chrome for Android but not Firefox for Android (sigh)
+      onContextMenu={(event) => {
+        event.preventDefault();
+      }}
+    >
+      <img src={url} alt={city} />
       <figcaption>{city}</figcaption>
     </figure>
   );
@@ -18,9 +22,9 @@ export default function Cards({ score, setScore, winState }) {
   const [history, setHistory] = useState([]);
   const [orderedCities, setOrderedCities] = useState(citiesObject);
 
-  function timeout(delay) {
-    return new Promise((res) => setTimeout(res, delay));
-  }
+  // function timeout(delay) {
+  //   return new Promise((res) => setTimeout(res, delay));
+  // }
 
   useEffect(() => {
     shuffleCards();
@@ -32,7 +36,6 @@ export default function Cards({ score, setScore, winState }) {
       setScore(0);
     }
   }, [winState]);
-
 
   function recordClick(city) {
     const repeats = history.filter((entry) => entry == city);
@@ -62,7 +65,7 @@ export default function Cards({ score, setScore, winState }) {
       ...city,
     }));
 
-    await timeout(400);
+    // await timeout(400);
     setOrderedCities(shuffledCities);
   }
 

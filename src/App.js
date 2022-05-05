@@ -48,7 +48,7 @@ function App() {
         Click on each Canadian city or territory once (and only once) to win
       </p>
       <ScoreBoard score={score} bestScore={bestScore} />
-      <Cards score={score} setScore={setScore} winState={winState} />
+      <Cards setScore={setScore} winState={winState} />
       <Win winState={winState} setWinState={setWinState} />
     </div>
   );

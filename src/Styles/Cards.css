@@ -22,6 +22,7 @@
     width: 200px;
     height: 200px;
     border-radius: 15px;
+    pointer-events: none;
   
     -webkit-filter: grayscale(0%);
     filter: grayscale(0%);

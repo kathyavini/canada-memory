@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# Memory Cards: Canada Edition
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+    <img src="./src/Assets/maple-leaf.svg" width="100px">
+</div>
 
-## Available Scripts
+[Play live version on GitHub Pages](https://kathyavini.github.io/canada-memory/)
 
-In the project directory, you can run:
+A mobile-responsive memory card game I wrote to mark the occasion of submitting my application for Canadian PR.
 
-### `npm start`
+------------------
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## How to Play
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Click or tap on each Canadian city or territory once and only once to win. Choosing the same card twice resets your score to 0. There are 17 Canada Cards in total.
 
-### `npm test`
+On desktop you can hover each card to get the location name. On mobile, long press to reveal.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+------------------
 
-### `npm run build`
+## About this project
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Built with
+- React.js
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Assignment Description
 
-### `npm run eject`
+This project is from The Odin Project fullstack JavaScript curriculum. You can find a full task description of [Memory Card](https://www.theodinproject.com/lessons/node-path-javascript-memory-card) on the TOP Website.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+------------------
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Acknowledgments
+### Packages
+- [react-confetti](https://github.com/alampros/react-confetti)
+- [react-rewards](https://github.com/thedevelobear/react-rewards)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Attributions - Icons
+- Maple leaf by [Emily Keller](https://thenounproject.com/emilykeller/) from NounProject.com
+- Map of Canada by [Johann Berger](https://thenounproject.com/Yb/) from NounProject.com
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Attributions - Photographs
+- Calgary by [Nataliia Kvitovska](https://unsplash.com/@nkvitovska) on [Unsplash](https://unsplash.com/photos/XQFQIutdIq8)
+- Charlottetown by [M.](https://unsplash.com/@mkdrone_) on [Unplash](https://unsplash.com/photos/ZbXuMe2EyD4)
+- Edmonton by [Chong Wei](https://unsplash.com/@cwei4fun) on [Unplash](https://unsplash.com/photos/ZFiRRhrHyws)
+- Fredericton by Breauon on [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:New_Brunswick_Legislature.png)
+- Halifax by [Enrique Hoyos](https://www.pexels.com/@enriquehoyos/) on [Pexels](https://www.pexels.com/photo/old-landmark-with-clock-under-colorful-sky-4041584/)
+- Montreal by [the Bialons](https://unsplash.com/@bialons) on [Unsplash](https://unsplash.com/photos/36B-WO8yCMs)
+- Nunavut by [Isaac Demeester](https://unsplash.com/@demeester) on [Unsplash](https://unsplash.com/photos/DPWOAzndmL4)
+- Ottawa by [Chris DeSort](https://unsplash.com/@desort_design) on [Unsplash](https://unsplash.com/photos/U-fJl3lTWJ4)
+- Quebec City by [Tim Geenens](https://unsplash.com/@geenens_tim) on [Unsplash](https://unsplash.com/photos/p5XgTYTFEaU)
+- Saskatoon by [Yuvaksh Thukral](https://unsplash.com/@yuvaksh) on [Unsplash](https://unsplash.com/photos/XVVrHpt8_VM)
+- St. John's by [Erik Mclean](https://unsplash.com/@introspectivedsgn) on [Unplash](https://unsplash.com/photos/LBDkOa3X44E)
+- Toronto by [mwangi gatheca](https://unsplash.com/@thirdworldhippy) on [Unsplah](https://unsplash.com/photos/qlKaN7eqay8)
+- Vancouver by [John Wilander](https://unsplash.com/@jwilander) on [Unsplash](https://unsplash.com/photos/KVCFfrMbcaw)
+- Victoria by [Reid Naaykens](https://unsplash.com/@reidnaa) on [Unsplash](https://unsplash.com/@reidnaa)
+- Winnipeg by [Josh Lavallee](https://unsplash.com/@yoshigrams) on [Unsplash](https://unsplash.com/photos/RLtFZZa30vY)
+- Yellowknife by [Lotus Raphael](https://unsplash.com/@raphaelo) on [Unsplash](https://unsplash.com/photos/VpTGCK6zsp4)
+- Yukon by [Leonard Laub](https://unsplash.com/@leolaub) on [Unsplash](https://unsplash.com/photos/h9Rx3MawsUo)

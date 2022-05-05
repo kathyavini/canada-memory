@@ -2,15 +2,11 @@ import { useState, useEffect } from 'react';
 import citiesObject from '../cities';
 import '../Styles/Cards.css';
 
-function Card({ city, index, url, handleClick }) {
+function Card({ city, url, handleClick }) {
   return (
     <figure
       className="city-card"
       onClick={handleClick}
-      // This disables the context menu on long press on Chrome for Android but not Firefox for Android -- not sure why it fails in Firefox
-      onContextMenu={(event) => {
-        event.preventDefault();
-      }}
     >
       <img src={url} alt={city} />
       <figcaption>{city}</figcaption>
@@ -18,13 +14,9 @@ function Card({ city, index, url, handleClick }) {
   );
 }
 
-export default function Cards({ score, setScore, winState }) {
+export default function Cards({ setScore, winState }) {
   const [history, setHistory] = useState([]);
   const [orderedCities, setOrderedCities] = useState(citiesObject);
-
-  // function timeout(delay) {
-  //   return new Promise((res) => setTimeout(res, delay));
-  // }
 
   useEffect(() => {
     shuffleCards();
@@ -65,7 +57,6 @@ export default function Cards({ score, setScore, winState }) {
       ...city,
     }));
 
-    // await timeout(400);
     setOrderedCities(shuffledCities);
   }
 
@@ -73,7 +64,6 @@ export default function Cards({ score, setScore, winState }) {
     <Card
       city={city.name}
       key={city.index}
-      index={city.index}
       url={city.url}
       handleClick={() => {
         recordClick(city.name);

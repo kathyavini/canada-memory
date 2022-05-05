@@ -5,7 +5,7 @@ import canada from '../Assets/canada.svg';
 import '../Styles/Win.css';
 
 export default function Win({ winState, setWinState }) {
-  // Don't love it but message visible requires a separate state from winState merely for use with CSS animations
+  // Don't love it but this is in addition to winState merely for use with CSS animations
   const [msgVis, setMsgVis] = useState(true);
 
   const { reward, isAnimating } = useReward('reward-id', 'emoji', {

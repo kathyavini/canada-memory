@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/canada-memory/static/css/main.f5f08238.css",
+    "main.js": "/canada-memory/static/js/main.378e9470.js",
+    "static/media/fredericton.png": "/canada-memory/static/media/fredericton.d98875751f564951e497.png",
+    "static/media/canada.svg": "/canada-memory/static/media/canada.73359c3b790b075418af0d1f19ef9d11.svg",
+    "static/media/quebec-city.jpg": "/canada-memory/static/media/quebec-city.6f67a7cdf408f3b84261.jpg",
+    "static/media/charlottetown.jpg": "/canada-memory/static/media/charlottetown.d972dffd17951e2db793.jpg",
+    "static/media/victoria.jpg": "/canada-memory/static/media/victoria.661563e9d432e0f2fef0.jpg",
+    "static/media/calgary.jpg": "/canada-memory/static/media/calgary.062c3586cddfe51c2f09.jpg",
+    "static/media/vancouver.jpg": "/canada-memory/static/media/vancouver.2e5ab90a44f875377e85.jpg",
+    "static/media/st-johns.jpg": "/canada-memory/static/media/st-johns.eddb7de8410016879cd9.jpg",
+    "static/media/montreal.jpg": "/canada-memory/static/media/montreal.5cadef017dae3b94dce9.jpg",
+    "static/media/toronto.jpg": "/canada-memory/static/media/toronto.5fec316d6b702ce36ca2.jpg",
+    "static/media/winnipeg.jpg": "/canada-memory/static/media/winnipeg.090ebebb6ecbb8171b91.jpg",
+    "static/media/halifax.jpg": "/canada-memory/static/media/halifax.49bcb3a3456f59dfd414.jpg",
+    "static/media/yukon.jpg": "/canada-memory/static/media/yukon.0b2eb35da426abe747dd.jpg",
+    "static/media/ottawa.jpg": "/canada-memory/static/media/ottawa.d08ca791cb1170e0faab.jpg",
+    "static/media/nunavut.jpg": "/canada-memory/static/media/nunavut.6f1758f2245c0ac09ec4.jpg",
+    "static/media/yellowknife.jpg": "/canada-memory/static/media/yellowknife.880ee667f08bcd898740.jpg",
+    "static/media/edmonton.jpg": "/canada-memory/static/media/edmonton.959b8bf26c13ea762e2f.jpg",
+    "static/media/saskatoon.jpg": "/canada-memory/static/media/saskatoon.1ace3ff38d6b05122a78.jpg",
+    "static/media/maple-leaf.svg": "/canada-memory/static/media/maple-leaf.9b2f7277bcdb16fc8dab99289bd51b2c.svg",
+    "index.html": "/canada-memory/index.html",
+    "main.f5f08238.css.map": "/canada-memory/static/css/main.f5f08238.css.map",
+    "main.378e9470.js.map": "/canada-memory/static/js/main.378e9470.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f5f08238.css",
+    "static/js/main.378e9470.js"
+  ]
+}

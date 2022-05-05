@@ -1,10 +1,10 @@
-// The following from https://stackoverflow.com/questions/53762640/how-to-import-all-images-from-a-folder-in-reactjs
+// From https://stackoverflow.com/questions/53762640/how-to-import-all-images-from-a-folder-in-reactjs
 function importAll(r) {
   return r.keys().map(r);
 }
 
 const images = importAll(
-  require.context('./Assets', false, /\.(png|jpe?g|svg)$/)
+  require.context('./Assets/Cities/', false, /\.(png|jpe?g|svg)$/)
 );
 
 const cities = [

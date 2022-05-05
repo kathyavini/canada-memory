@@ -1,0 +1,64 @@
+.win-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    overflow-x: hidden;
+    min-height: 100%;
+    display: grid;
+    place-items: center;
+  }
+  
+  /* This canvas element is created by react-confetti */
+  .win-container canvas {
+    z-index: 5!important; 
+  }
+  
+  /* To not leave the toolbar sized gap at the bottom after scrolling on mobile */
+  /* However on the desktop this resizes the canvas oddly so I am targeting only mobile*/
+  @media (max-width:650px) {
+    .win-container canvas {
+      height: 100%!important;
+      width: auto!important;
+    }
+  }
+  
+  .win-message {
+    color:#edf2f4;
+    width: 50vw;
+    max-width: 350px;
+    background-color: #2b2d42;
+    padding: 50px 60px 50px 60px;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.65) 0px 5px 15px;
+    animation: fadeOut 1s 2s forwards;
+  }
+  
+  .visible {
+    opacity: 1;
+    z-index: 3;
+    animation: fadeIn 2s forwards;
+  }
+  
+  @keyframes fadeIn{
+    0%      { opacity: 0; }
+    100%    { opacity: 1; }
+  }
+  
+  @keyframes fadeOut{
+    0%      { opacity: 1; z-index: 1}
+    100%    { opacity: 0; z-index: -1}
+  }
+  
+  .canada {
+    width: 300px;
+    height: auto;
+  }
+  
+  .blur {
+    filter: blur(10px);
+  }

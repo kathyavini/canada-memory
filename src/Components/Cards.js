@@ -7,7 +7,7 @@ function Card({ city, index, url, handleClick }) {
     <figure
       className="city-card"
       onClick={handleClick}
-      // This disables the context menu on long press on Chrome for Android but not Firefox for Android (sigh)
+      // This disables the context menu on long press on Chrome for Android but not Firefox for Android -- not sure why it fails in Firefox
       onContextMenu={(event) => {
         event.preventDefault();
       }}
